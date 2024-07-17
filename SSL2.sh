@@ -61,9 +61,9 @@ cat <<EOF > $SSL_CONF
 EOF
 
 # Activer la configuration du site SSL et les modules nécessaires
-a2ensite moodle-ssl.conf
-a2enmod ssl
-a2enmod headers
+/usr/sbin/a2ensite moodle-ssl.conf
+/usr/sbin/a2enmod ssl
+/usr/sbin/a2enmod headers
 
 # Redémarrer Apache pour appliquer les modifications
 systemctl restart apache2
